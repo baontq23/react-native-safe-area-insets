@@ -1,6 +1,6 @@
 # react-native-safe-area-insets
 
-No description
+Get safe area insets values without hook and call any where
 
 ## Installation
 
@@ -10,15 +10,14 @@ npm install react-native-safe-area-insets
 
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-safe-area-insets';
+import SafeAreaInsets from 'react-native-safe-area-insets';
 
 // ...
 
-const result = multiply(3, 7);
+const insets = SafeAreaInsets.getSafeAreaInsets();
+console.log(insets); // {top: number, bottom: number, left: number, right: number}
 ```
-
 
 ## Contributing
 
