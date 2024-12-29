@@ -1,12 +1,13 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-safe-area-insets';
-
-const result = multiply(3, 7);
+import SafeAreaInsets from 'react-native-safe-area-insets';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Top: {SafeAreaInsets.getSafeAreaInsets().top}</Text>
+      <Text>Bottom: {SafeAreaInsets.getSafeAreaInsets().bottom}</Text>
+      <Text>Left: {SafeAreaInsets.getSafeAreaInsets().left}</Text>
+      <Text>Right: {SafeAreaInsets.getSafeAreaInsets().right}</Text>
     </View>
   );
 }
